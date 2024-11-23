@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web - Academia de Tecnología Avanzada</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        h2, h3 {
+            color: #35424a;
+        }
+        section {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        pre {
+            background: #e8e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desarrollo Web</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./java.html" class="course-link">Programación en Java</a></li>
+                <li><a href="./databases.html">Bases de Datos</a></li>
+                <li><a href="./ai.html">Inteligencia Artificial</a></li>
+                <li><a href="#" id="logoutBtn" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>¿Qué es el Desarrollo Web?</h2>
+        <p>El desarrollo web es el proceso de creación, diseño e implementación de aplicaciones o sitios web que funcionan a través de internet. Implica una combinación de programación, diseño visual, y optimización para ofrecer experiencias interactivas y funcionales en navegadores web.</p>
+
+        <section>
+            <h3>Componentes Fundamentales del Desarrollo Web</h3>
+            <ol>
+                <li><strong>Frontend (Lado del Cliente)</strong>
+                    <ul>
+                        <li>Es la interfaz visible e interactiva del sitio web que los usuarios experimentan.</li>
+                        <li>Tecnologías principales:
+                            <ul>
+                                <li><strong>HTML (HyperText Markup Language)</strong>: Estructura del contenido web.</li>
+                                <li><strong>CSS (Cascading Style Sheets)</strong>: Estiliza el diseño (colores, fuentes, layout).</li>
+                                <li><strong>JavaScript</strong>: Añade interactividad y dinamismo (animaciones, formularios, etc.).</li>
+                            </ul>
+                        </li>
+                        <li>Frameworks populares: React, Angular, Vue.js.</li>
+                    </ul>
+                </li>
+                <li><strong>Backend (Lado del Servidor)</strong>
+                    <ul>
+                        <li>Gestiona la lógica, bases de datos y procesamiento que soporta la funcionalidad del sitio.</li>
+                        <li>Tecnologías principales:
+                            <ul>
+                                <li>Lenguajes: <strong>Python</strong>, <strong>PHP</strong>, <strong>Java</strong>, <strong>Ruby</strong>, <strong>Node.js</strong>.</li>
+                                <li>Servidores: <strong>Apache</strong>, <strong>NGINX</strong>.</li>
+                                <li>Frameworks: Django, Flask, Laravel, Express.js.</li>
+                            </ul>
+                        </li>
+                        <li>Interactúa con bases de datos para manejar información.</li>
+                    </ul>
+                </li>
+                <li><strong>Bases de Datos</strong>
+                    <ul>
+                        <li>Almacenan y gestionan los datos de las aplicaciones.</li>
+                        <li>Tipos principales:
+                            <ul>
+                                <li>Relacionales: <strong>MySQL </strong>, <strong>PostgreSQL</strong>, <strong>Oracle DB</strong>.</li>
+                                <li>NoSQL: <strong>MongoDB</strong>, <strong>Firebase</strong>, <strong>Cassandra</strong>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>DevOps e Infraestructura</strong>
+                    <ul>
+                        <li>Se ocupa del despliegue, monitoreo y mantenimiento del sitio o aplicación web.</li>
+                        <li>Herramientas: Docker, Kubernetes, AWS, Azure.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Tipos de Desarrollo Web</h3>
+            <ol>
+                <li><strong>Sitios Estáticos</strong>
+                    <ul>
+                        <li>Contenido fijo que no cambia según la interacción del usuario.</li>
+                        <li>Ejemplo: Páginas informativas.</li>
+                    </ul>
+                </li>
+                <li><strong>Sitios Dinámicos</strong>
+                    <ul>
+                        <li>Generan contenido interactivo adaptado a la interacción del usuario.</li>
+                        <li>Ejemplo: Redes sociales, tiendas en línea.</li>
+                    </ul>
+                </li>
+                <li><strong>Aplicaciones Web</strong>
+                    <ul>
+                        <li>Funcionalidades similares a aplicaciones móviles, ejecutadas en navegadores.</li>
+                        <li>Ejemplo: Google Docs, Gmail.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Proceso de Desarrollo Web</h3>
+            <ol>
+                <li><strong>Planificación</strong>: Definición de objetivos, público objetivo y funcionalidades requeridas.</li>
+                <li><strong>Diseño</strong>: Creación de wireframes y maquetas visuales.</li>
+                <li><strong>Desarrollo</strong>: Codificación del frontend, backend e integración con bases de datos.</li>
+                <li><strong>Pruebas</strong>: Identificación y resolución de errores (testing de funcionalidad, seguridad, y rendimiento).</li>
+                <li><strong>Despliegue</strong>: Lanzamiento del sitio en un servidor.</li>
+                <li><strong>Mantenimiento</strong>: Actualizaciones periódicas y soporte técnico.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Herramientas y Tecnologías Clave</h3>
+            <ol>
+                <li><strong>Editores de Código</strong>: Visual Studio Code, Sublime Text.</li>
+                <li><strong>Control de Versiones</strong>: Git, GitHub, GitLab.</li>
+                <li><strong>Frameworks y Librerías</strong>
+                    <ul>
+                        <li>Frontend: Bootstrap, Tailwind CSS.</li>
+                        <li>Backend: Spring Boot, ASP.NET.</li>
+                    </ul>
+                </li>
+                <li><strong>Plataformas de Hosting</strong>: Netlify, Heroku, Vercel.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Tendencias Actuales</h3>
+            <ol>
+                <li><strong>Aplicaciones Progresivas (PWA)</strong>: Combina lo mejor de sitios web y aplicaciones nativas.</li>
+                <li><strong>Headless CMS</strong>: Sistemas de gestión de contenido desacoplados como Strapi.</li>
+                <li><strong>Web 3.0 y Blockchain</strong>: Desarrollo descentralizado.</li>
+                <li><strong>Optimización de SEO y UX</strong>: Mejora de experiencia y posicionamiento en motores de búsqueda.</li>
+            </ol>
+        </section>
+        <section>
+            <h3>Cuestionario</h3>
+            <p>¿Te gustaría poner a prueba tus conocimientos sobre Desarrollo Web? Haz clic en el siguiente botón para acceder al cuestionario.</p>
+            <button onclick="window.location.href='../cuestionarios/cuestionarioweb.html'">Ir al Cuestionario</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Academia de Tecnología Avanzada. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

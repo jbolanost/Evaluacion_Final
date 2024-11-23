@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de Datos - Academia de Tecnología Avanzada</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        h2, h3 {
+            color: #35424a;
+        }
+        section {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ol {
+            margin-left: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        pre {
+            background: #e8e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bases de Datos</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./java.html" class="course-link">Programación en Java</a></li>
+                <li><a href="./web.html">Desarrollo Web</a></li>
+                <li><a href="./ai.html">Inteligencia Artificial</a></li>
+                <li><a href="#" id="logoutBtn" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>¿Qué es una Base de Datos?</h2>
+        <p>Una <strong>base de datos</strong> es un sistema organizado para almacenar, gestionar y recuperar información de manera eficiente. Se utiliza en casi todas las aplicaciones modernas, desde sitios web hasta sistemas empresariales complejos.</p>
+
+        <section>
+            <h3>Características de una Base de Datos</h3>
+            <ol>
+                <li><strong>Estructurada</strong>: Los datos se organizan en tablas, documentos o grafos, dependiendo del modelo.</li>
+                <li><strong>Accesible</strong>: Permite a los usuarios consultar, insertar, actualizar y eliminar datos fácilmente.</li>
+                <li><strong>Persistente</strong>: Los datos se mantienen almacenados incluso después de apagar el sistema.</li>
+                <li><strong>Segura</strong>: Protege los datos contra accesos no autorizados y corrupción.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Tipos de Bases de Datos</h3>
+            <ol>
+                <li><strong>Relacionales</strong>
+                    <ul>
+                        <li>Organizan los datos en tablas con filas y columnas.</li>
+                        <li>Utilizan <strong>SQL (Structured Query Language)</strong> para gestionar los datos.</li>
+                        <li>Ejemplos: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.</li>
+                    </ul>
+                </li>
+                <li><strong>NoSQL (No solo SQL)</strong>
+                    <ul>
+                        <li>Diseñadas para manejar datos no estructurados o semiestructurados.</li>
+                        <li>Tipos principales:
+                            <ul>
+                                <li><strong>Documentales</strong>: MongoDB, CouchDB.</li>
+                                <li><strong>Clave-Valor</strong>: Redis, DynamoDB.</li>
+                                <li><strong>Columnar</strong>: Cassandra, HBase.</li>
+                                <li><strong>Grafos</strong>: Neo4j, ArangoDB.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Bases de Datos en Memoria</strong>
+                    <ul>
+                        <li>Almacenan datos directamente en la memoria RAM para acceso ultrarrápido.</li>
+                        <li>Ejemplo: Redis, Memcached.</li>
+                    </ul>
+                </li>
+                <li><strong>Bases de Datos Distribuidas</strong>
+                    <ul>
+                        <li>Los datos están repartidos entre múltiples servidores.</li>
+                        <li>Ejemplo: Apache Cassandra, Google Spanner.</li>
+                    </ul>
+                </li>
+                <li><strong>Bases de Datos Orientadas a Objetos</strong>
+                    <ul>
+                        <li>Integran conceptos de programación orientada a objetos.</li>
+                        <li>Ejemplo: db4o, ObjectDB.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Elementos Básicos de una Base de Datos Relacional</h3>
+            <ol>
+                <li><strong>Tablas</strong>: Almacenan datos en formato de filas (tuplas) y columnas.</li>
+                <li><strong>Campos</strong>: Columnas que definen tipos específicos de datos.</li>
+                <li><strong>Registros</strong>: Filas que contienen los datos individuales.</li>
+                <li><strong>Claves</strong>:
+                    <ul>
+                        <li><strong>Primaria</strong>: Identifica de manera única un registro en la tabla.</li>
+                        <li><strong>Foránea</strong>: Relaciona tablas diferentes.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Sistemas de Gestión de Bases de Datos (DBMS)</h3>
+            <p>Un <strong>DBMS</strong> es software que gestiona bases de datos, permitiendo el acceso, modificación y administración de datos. Ejemplos:</p>
+            <ul>
+                <li><strong>Relacionales</strong>: MySQL, Oracle, SQLite.</li>
+                <li><strong>NoSQL</strong>: MongoDB, Couchbase.</li>
+                <li><strong>En la nube</strong>: Google BigQuery, Amazon RDS, Azure Cosmos DB.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Operaciones CRUD</h3>
+            <p>CRUD es el conjunto de operaciones básicas que cualquier base de datos debe soportar:</p>
+            <ol>
+                <li><strong>Create</strong>: Insertar nuevos datos.</li>
+                <li><strong>Read</strong>: Consultar datos existentes.</li>
+                <li><strong>Update</strong>: Modificar datos.</li>
+                <li><strong>Delete</strong>: Eliminar datos.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Ventajas de Usar Bases de Datos</h3>
+            <ol>
+                <li><strong>Organización</strong>: Estructuración clara y coherente de datos.</li>
+                <li><strong>Escalabilidad</strong>: Soporta grandes volúmenes de datos.</li>
+                <li><strong>Seguridad</strong>: Control de acceso y respaldo de información.</li>
+                <li><strong>Integridad de Datos</strong>: Reglas para evitar inconsistencias.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Desventajas</h3>
+            <ol>
+                <li>Curva de aprendizaje para administrarlas.</li>
+                <li>Requieren recursos (almacenamiento y hardware).</li>
+                <li>Complejidad en grandes sistemas distribuidos.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Tendencias Actuales</h3>
+            <ol>
+                <li><strong>Bases de Datos en la Nube</strong>: Reducción de costos y fácil escalabilidad (AWS, Google Cloud, Azure).</li>
+                <li><strong>Bases de Datos Multimodelo</strong>: Combinan varios tipos (OrientDB, ArangoDB).</li>
+                <li><strong>Automatización</strong>: AI para optimizar consultas y mantenimiento.</li>
+                <li><strong>Big Data</strong>: Uso de bases de datos distribuidas como Hadoop para analizar grandes volúmenes de datos.</li>
+            </ol>
+        </section>
+        <section>
+            <h3>Cuestionario</h3>
+            <p>¿Te gustaría poner a prueba tus conocimientos sobre Bases de Datos? Haz clic en el siguiente botón para acceder al cuestionario.</p>
+            <button onclick="window.location.href='../cuestionarios/cuestionariodata.html'">Ir al Cuestionario</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Academia de Tecnología Avanzada. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

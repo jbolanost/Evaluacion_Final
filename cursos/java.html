@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación en Java - Academia de Tecnología Avanzada</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        h2, h3 {
+            color: #35424a;
+        }
+        section {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .gallery img {
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Programación en Java</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./web.html">Desarrollo Web</a></li>
+                <li><a href="./databases.html">Bases de Datos</a></li>
+                <li><a href="./ai.html">Inteligencia Artificial</a></li>
+                <li><a href="#" id="logoutBtn" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Curso de Programación en Java</h2>
+        <p>Este curso está diseñado para estudiantes que desean aprender a programar en Java, uno de los lenguajes de programación más utilizados en el mundo. Aprenderás desde los conceptos básicos hasta temas avanzados como la programación orientada a objetos.</p>
+
+        <section>
+            <h3>Java: Un Lenguaje Versátil</h3>
+            <p>Java es un lenguaje de programación orientado a objetos, versátil y ampliamente utilizado para desarrollar aplicaciones de escritorio, móviles, web y sistemas empresariales. Fue creado por Sun Microsystems en 1995 y actualmente es mantenido por Oracle Corporation.</p>
+        </section>
+
+        <section>
+            <h3>Principales Características de Java</h3>
+            <ul>
+                <li>Orientado a Objetos</li>
+                <li>Portabilidad</li>
+                <li>Lenguaje robusto</li>
+                <li>Sintaxis sencilla</li>
+                <li>Multihilo (Multithreading)</li>
+                <li>Bibliotecas extensas</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Componentes Fundamentales</h3>
+            <ul>
+                <li><strong>JDK (Java Development Kit)</strong>: Herramientas necesarias para desarrollar aplicaciones.</li>
+                <li><strong>JVM (Java Virtual Machine)</strong>: Interpreta el bytecode y lo ejecuta en la máquina.</li>
+                <li><strong>JRE (Java Runtime Environment)</strong>: Incluye la JVM y las bibliotecas esenciales para ejecutar aplicaciones Java.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Fundamentos de Programación en Java</h3>
+            <h4>Estructura Básica de un Programa:</h4>
+            <pre>
+                public class HolaMundo {
+                    public static void main(String[] args) {
+                        System.out.println("¡Hola, mundo!");
+                    }
+                }
+            </pre>
+            <h4>Clases y Objetos:</h4>
+            <p>Clase: Plantilla para crear objetos. Objeto: Instancia de una clase.</p>
+            <h4>Principales Tipos de Datos:</h4>
+            <p>Primitivos: int, double, char, boolean. Referenciados: Arrays, Strings, y clases personalizadas.</p>
+
+            <h4>Control de Flujo:</h4>
+            <p>Condicionales: if, else, switch. Bucles: for, while, do-while.</p>
+
+            <h4>Programación Orientada a Objetos (POO):</h4>
+            <ul>
+                <li>Herencia: Una clase puede heredar atributos y métodos de otra.</li>
+                <li>Polimorfismo: Métodos que se comportan de manera distinta dependiendo del contexto.</li>
+                <li>Encapsulación: Restricción de acceso a los datos mediante modificadores (private, public, protected).</li>
+                <li>Abstracción: Definición de clases abstractas o interfaces para simplificar diseños.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Aplicaciones Comunes de Java</h3>
+            <ul>
+                <li>Aplicaciones empresariales: A través de frameworks como Spring o Java EE.</li>
+                <li>Desarrollo web: Mediante Servlets, JSP o frameworks como Spring MVC.</li>
+                <li>Desarrollo móvil: Base para aplicaciones Android usando Android Studio.</li>
+                <li>Big Data: Usado en tecnologías como Hadoop.</li>
+                <li>Desarrollo de videojuegos: Mediante librerías como LibGDX.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Ventajas y Desventajas</h3>
+            <h4>Ventajas:</h4>
+            <ul>
+                <li>Gran comunidad y soporte.</li>
+                <li>Escalabilidad para proyectos pequeños o grandes.</li>
+                <li>Altos niveles de seguridad.</li>
+            </ul>
+            <h4>Desventajas:</h4>
+            <ul>
+                <li>Puede ser más lento que otros lenguajes modernos debido a la interpretación en la JVM.</li>
+                <li>Requiere más memoria y recursos en comparación con lenguajes como C++.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Cuestionario</h3>
+            <p>¿Te gustaría poner a prueba tus conocimientos sobre Programación en Java? Haz clic en el siguiente botón para acceder al cuestionario.</p>
+            <button onclick="window.location.href='../cuestionarios/cuestionariojava.html'">Ir al Cuestionario</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Academia de Tecnología Avanzada. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

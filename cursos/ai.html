@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Artificial - Academia de Tecnología Avanzada</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        h2, h3 {
+            color: #35424a;
+        }
+        section {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ol {
+            margin-left: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inteligencia Artificial</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./java.html" class="course-link">Programación en Java</a></li>
+                <li><a href="./web.html">Desarrollo Web</a></li>
+                <li><a href="./databases.html">Bases de Datos</a></li>
+                <li><a href="#" id="logoutBtn" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>¿Qué es la Inteligencia Artificial?</h2>
+        <p>La <strong>Inteligencia Artificial (IA)</strong> es un campo de la informática que busca desarrollar sistemas capaces de realizar tareas que tradicionalmente requieren inteligencia humana, como el aprendizaje, razonamiento, toma de decisiones y procesamiento del lenguaje. Combina disciplinas como matemáticas, estadística y ciencias de la computación.</p>
+
+        <section>
+            <h3>Características de la Inteligencia Artificial</h3>
+            <ol>
+                <li><strong>Automatización de tareas</strong>: Realiza acciones repetitivas sin intervención humana.</li>
+                <li><strong>Capacidad de aprendizaje</strong>: Adapta su comportamiento basándose en datos y experiencias previas.</li>
+                <li><strong>Razonamiento lógico</strong>: Analiza información para tomar decisiones óptimas.</li>
+                <li><strong>Interacción humana</strong>: Entiende y responde al lenguaje natural o señales visuales (como el reconocimiento facial).</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Subcampos Principales de la IA</h3>
+            <ol>
+                <li><strong>Aprendizaje Automático (Machine Learning)</strong>
+                    <ul>
+                        <li>Modelos que aprenden de datos sin ser programados explícitamente.</li>
+                        <li>Tipos:
+                            <ul>
+                                <li><strong>Supervisado</strong>: Aprendizaje con datos etiquetados.</li>
+                                <li><strong>No supervisado</strong>: Identifica patrones en datos sin etiquetar.</li>
+                                <li><strong>Por refuerzo</strong>: Aprende mediante ensayo y error.</li>
+                            </ul>
+                        </li>
+                        <li>Ejemplo: Clasificación de correos como spam.</li>
+                    </ul>
+                </li>
+                <li><strong>Procesamiento de Lenguaje Natural (NLP)</strong>
+                    <ul>
+                        <li>Permite que las máquinas comprendan y generen lenguaje humano.</li>
+                        <li>Ejemplo: Asistentes virtuales como Siri o ChatGPT.</li>
+                    </ul>
+                </li>
+                <li><strong>Visión por Computadora</strong>
+                    <ul>
+                        <li>Interpretación de imágenes y videos.</li>
+                        <li>Ejemplo: Reconocimiento facial y detección de objetos.</li>
+                    </ul>
+                </li>
+                <li><strong>Robótica</strong>
+                    <ul>
+                        <li>Combinación de IA con sistemas mecánicos para realizar tareas físicas.</li>
+                        <li>Ejemplo: Robots autónomos en fábricas.</li>
+                    </ul>
+                </li>
+                <li><strong>Sistemas Expertos</strong>
+                    <ul>
+                        <li>Simulan la toma de decisiones humanas basándose en conocimiento especializado.</li>
+                        <li>Ejemplo: Diagnósticos médicos asistidos por IA.</li>
+                    </ul>
+                </li>
+                <li><strong>Inteligencia Artificial General (AGI)</strong>
+                    <ul>
+                        <li>En desarrollo, busca crear sistemas con capacidades intelectuales similares a las humanas.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Aplicaciones de la IA</h3>
+            <ol>
+                <li><strong>Salud</strong>: Diagnóstico de enfermedades, descubrimiento de medicamentos.</li>
+                <li><strong>Finanzas</strong>: Detección de fraudes, asesoramiento financiero.</li>
+                <li><strong>Automoción</strong>: Vehículos autónomos (como los de Tesla).</li>
+                <li><strong>Marketing</strong>: Personalización de recomendaciones y análisis de comportamiento.</li>
+                <li><strong>Educación</strong>: Sistemas de tutoría inteligente.</li>
+                <li><strong>Industria</strong>: Automatización de procesos y mantenimiento predictivo.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Ventajas de la IA</h3>
+            <ol>
+                <li><strong>Eficiencia</strong>: Automatización de tareas repetitivas y análisis de datos masivos.</li>
+                <li><strong>Precisión</strong>: Reducción de errores en tareas complejas.</li>
+                <li><strong>Adaptabilidad</strong>: Mejora continua mediante el aprendizaje.</li>
+                <li><strong>Innovación</strong>: Nuevas aplicaciones en diversos sectores.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Desafíos y Desventajas</h3>
+            <ol>
+                <li><strong>Ética y privacidad</strong>: Riesgos de sesgos, discriminación y uso indebido de datos.</li>
+                <li><strong>Desempleo</strong>: Sustitución de trabajos humanos por automatización.</li>
+                <li><strong>Complejidad</strong>: Dificultades técnicas en su implementación.</li>
+                <li><strong>Dependencia</strong>: Excesiva confianza en sistemas automatizados.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Tendencias Actuales</h3>
+            <ol>
+                <li><strong>Modelos Generativos</strong>: Creación de contenido como texto, imágenes y videos (GPT, DALL·E, MidJourney).</li>
+                <li><strong>IA Explicable (XAI)</strong>: Transparencia en cómo las IA toman decisiones.</li>
+                <li><strong>Automatización Inteligente</strong>: Combinación de IA y robótica para optimizar procesos.</li>
+                <li><strong>Integración en la nube</strong>: Acceso global a soluciones de IA mediante plataformas como AWS, Google AI y Azure.</li>
+            </ol>
+        </section>
+        <section>
+            <h3>Cuestionario</h3>
+            <p>¿Te gustaría poner a prueba tus conocimientos sobre Inteligencia Artificial? Haz clic en el siguiente botón para acceder al cuestionario.</p>
+            <button onclick="window.location.href='../cuestionarios/cuestionarioia.html'">Ir al Cuestionario</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Academia de Tecnología Avanzada. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Java - Academia de Tecnología Avanzada</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #35424a;
+        }
+        section {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .button {
+            background-color: #35424a;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cuestionario de Programación en Java</h1>
+    </header>
+    <main>
+        <h2>Responde las siguientes preguntas:</h2>
+        <form id="quizForm">
+            <section>
+                <h3>1. ¿Qué es Java?</h3>
+                <label><input type="radio" name="q1" value="a"> Un lenguaje de programación</label><br>
+                <label><input type="radio" name="q1" value="b"> Un sistema operativo</label><br>
+                <label><input type="radio" name="q1" value="c"> Un tipo de base de datos</label>
+            </section>
+
+            <section>
+                <h3>2. ¿Cuál de las siguientes es una característica de Java?</h3>
+                <label><input type="checkbox" name="q2" value="a"> Portabilidad</label><br>
+                <label><input type="checkbox" name="q2" value="b"> Lenguaje de bajo nivel</label><br>
+                <label><input type="checkbox" name="q2" value="c"> Orientado a objetos</label>
+            </section>
+
+            <section>
+                <h3>3. ¿Qué significa JVM?</h3>
+                <label><input type="radio" name="q3" value="a"> Java Virtual Machine</label><br>
+                <label><input type="radio" name="q3" value="b"> Java Variable Method</label><br>
+                <label><input type="radio" name="q3" value="c"> Java Visual Model</label>
+            </section>
+
+            <section>
+                <h3>4. ¿Cuál es la extensión de los archivos de clase de Java?</h3>
+                <label><input type="radio" name="q4" value="a"> .java</label><br>
+                <label><input type="radio" name="q4" value="b"> .class</label><br>
+                <label><input type="radio" name="q4" value="c"> .jar</label>
+            </section>
+
+            <section>
+                <h3>5. ¿Qué es un constructor en Java?</h3>
+                <label><input type="radio" name="q5" value="a"> Un método para inicializar objetos</label><br>
+                <label><input type="radio" name="q5" value="b"> Un tipo de variable</label><br>
+                <label><input type="radio" name="q5" value="c"> Un tipo de bucle</label>
+            </section>
+
+            <button type="submit" class="button">Completar</button>
+        </form>
+        <div id="result" style="margin-top: 20px;"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Academia de Tecnología Avanzada. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('quizForm').onsubmit = function(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+
+            // Verificar si todas las preguntas han sido respondidas
+            const questions = [
+                'q1', 'q2', 'q3', 'q4', 'q5'
+            ];
+            let allAnswered = true;
+            let score = 0;
+
+            questions.forEach((question, index) => {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (!selected) {
+                    allAnswered = false;
+                } else {
+                    // Aquí puedes agregar la lógica para calcular el puntaje
+                    // Por ejemplo, si la respuesta correcta es 'a' para la pregunta 1
+                    if (index === 0 && selected.value === 'a') score++;
+                    if (index === 1 && selected.value === 'a') score++; // Ejemplo
+                    if (index === 2 && selected.value === 'a') score++; // Ejemplo
+                    if (index === 3 && selected.value === 'b') score++; // Ejemplo
+                    if (index === 4 && selected.value === 'a') score++; // Ejemplo
+                }
+            });
+
+            if (!allAnswered) {
+                alert('Por favor, responde todas las preguntas antes de completar el cuestionario.');
+            } else {
+                document.getElementById('result').innerHTML = `Has respondido correctamente ${score} de ${questions.length} preguntas.`;
+            }
+        };
+    </script>
+</body>
+</html>
